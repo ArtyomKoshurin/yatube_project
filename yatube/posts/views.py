@@ -7,5 +7,4 @@ def index(request):
                          'информацией о сервисе.')
 # Create your views here.
 def group_posts(request, slug):
-    return HttpResponse(f'Страница, на которой будут посты, '
-                        f'отсортированные по группам. {slug}')
+    return HttpResponse('Страница постов')
