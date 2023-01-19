@@ -6,5 +6,5 @@ def index(request):
                          'Здесь вы можете ознакомиться с основной '
                          'информацией о сервисе.')
 # Create your views here.
-def group_posts(request, slug):
+def group_posts(request, any_slug):
     return HttpResponse('Страница постов, отсортированных по группам')
