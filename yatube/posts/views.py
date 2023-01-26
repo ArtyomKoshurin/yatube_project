@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
 def index(request):
@@ -12,14 +11,10 @@ def index(request):
 # Create your views here.
 
 
-def group_list(request):
+def group_posts(request):
     template = 'posts/group_list.html'
     title = 'Здесь будет информация о группах проекта Yatube'
     context = {
         'text': title,
     }
     return render(request, template, context)
-
-
-def group_posts(request, any_slug):
-    return HttpResponse('Описание групп')
