@@ -18,11 +18,9 @@ def index(request):
 
 def group_posts(request, any_slug):
     template = 'posts/group_list.html'
-    title = 'Записи сообщества'
     group = get_object_or_404(Group, slug=any_slug)
     posts = Post.objects.filter(group=group).order_by('-pub_date')[:10]
     context = {
-        'title': title,
         'group': group,
         'posts': posts,
     }
