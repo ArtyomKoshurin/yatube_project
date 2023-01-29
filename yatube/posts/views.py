@@ -4,11 +4,9 @@ from .models import Post, Group
 
 def index(request):
     template = 'posts/index.html'
-    title = 'Yatube'
-    text = 'Это главная страница проекта Yatube'
+    title = 'Последние обновления на сайте'
     posts = Post.objects.order_by('-pub_date')[:10]
     context = {
-        'text': text,
         'title': title,
         'posts': posts,
     }
